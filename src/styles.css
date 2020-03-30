@@ -1,0 +1,32 @@
+/* Add application styles & imports to this file! */
+
+ul {
+  width: 100%;
+  display: block;
+}
+
+ul li {
+  width: 100%;
+  display: block;
+}
+
+.chat-ul {
+  padding: 20px;
+}
+
+.user-p {
+  color: red;
+}
+
+.bot-p {
+  color: green;
+}
+
+.response-card-button {
+  background: blue;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50px;
+  border: none;
+}
