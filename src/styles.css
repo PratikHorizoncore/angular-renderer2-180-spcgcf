@@ -108,3 +108,12 @@ ul li {
     height: 25px;
 }
 *{box-sizing: border-box;}
+
+.bot-button{    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 0 0 6px 0px rgba(44, 24, 24, 0.2);
+    position: fixed;
+    right: 40px;
+    bottom: 75px}
