@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2, ViewChild } from "@angular/core";
+          import { Component, ElementRef, Renderer2, ViewChild } from "@angular/core";
 
 @Component({
   selector: "app-component",
@@ -49,8 +49,8 @@ export class AppComponent {
     this.renderer.addClass(botli, "bot-li");
     this.renderer.addClass(botp, "bot-p");
     const bottext = this.renderer.createText(`Bot: ${botMessage}`);
-    
-    const responseDiv = this.renderer.createElement("div");
+    this.renderer.appendChild(botp, bottext);
+    this.renderer.appendChild(botli, botp);
 
     for(let i = 0, len = this.statement6.responseCard.genericAttachments[0].buttons.length; i < len; i++) {
       const buttons = this.statement6.responseCard.genericAttachments[0].buttons[i];
@@ -59,17 +59,14 @@ export class AppComponent {
       this.renderer.setProperty(button, "value", buttons.value);
       this.renderer.addClass(button, "response-card-button");
       this.renderer.appendChild(button, buttontext);
-      this.renderer.appendChild(responseDiv, button);
-      this.renderer.addClass(responseDiv, "response-card-div");
+      this.renderer.appendChild(botli, button);
+      // this.renderer.addClass(responseDiv, "response-card-div");
       this.renderer.listen(button, "click", event => {
         console.log(event.target.value);
       })
     }
-
-    this.renderer.appendChild(botp, bottext);
-    this.renderer.appendChild(botli, botp);
-    this.renderer.addClass(responseDiv, "response-card-div");
-    this.renderer.appendChild(botli, responseDiv);
+    // this.renderer.addClass(responseDiv, "response-card-div");
+    // this.renderer.appendChild(botli, responseDiv);
     this.renderer.appendChild(this.animateThis.nativeElement, botli);
   }
 
