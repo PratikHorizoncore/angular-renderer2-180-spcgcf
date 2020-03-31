@@ -21,17 +21,40 @@ ul li {
 /* .bot-p {
   color: green;
 } */
-.chat-ul{padding: 0;margin:0;}
+.chat-ul{
+  padding:0 0 40px;
+  margin:0;
+}
 
-.chat-ul li{display: flex;max-width: 85vw;}
+.chat-ul li{
+  display: flex;
+  max-width: 85vw;
+}
 
-.chat-ul li.user-li{justify-content: flex-start;}
+.chat-ul li.user-li{
+  justify-content: flex-start;
+}
 
-.chat-ul li.user-li .user-p{margin:0;padding: 10px 15px;border-radius: 10px;background-color: #ffebee;color: #000;}
+.chat-ul li.user-li .user-p{
+  margin:0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #ffebee;
+  color: #000;
+}
 
-.chat-ul li.bot-li{justify-content: flex-end;    margin-left: auto;}
+.chat-ul li.bot-li{
+  justify-content: flex-end; 
+  margin-left: auto;
+}
 
-.chat-ul li.bot-li .bot-p{margin:0;padding: 10px 15px;border-radius: 10px;background-color:#e8eaf6 ;color: #000;}
+.chat-ul li.bot-li .bot-p{
+  margin:0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color:#e8eaf6 ;
+  color: #000;
+}
 
 .card {
     margin: 10px;
