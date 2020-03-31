@@ -91,6 +91,11 @@ export class AppComponent {
     // li > div > div > cardmedia
     const cardmedia = this.renderer.createElement('div');
     this.renderer.addClass(cardmedia, "card-media");
+    this.renderer.setStyle(cardmedia, "background-image", `url(${responseCard.genericAttachments[0].imageUrl})`);
+    this.renderer.setStyle(cardmedia, "background-position", "center center");
+    this.renderer.setStyle(cardmedia, "background-size", "contain");
+    this.renderer.setStyle(cardmedia, "background-repeat", "no-repeat");
+    this.renderer.setStyle(cardmedia, "height", "150px");
     this.renderer.appendChild(botcard, cardmedia);
 
     // li > div > div > cardaction
@@ -112,7 +117,7 @@ export class AppComponent {
     }
 
     this.renderer.appendChild(this.animateThis.nativeElement, botli);
-  }
+  } 
 
   statement1 = {
     message: "Hey there! Tell me your first name.",
