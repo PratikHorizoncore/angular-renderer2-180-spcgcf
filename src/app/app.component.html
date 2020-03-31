@@ -1,12 +1,8 @@
 <ul class="col-md-2 chat-ul" #addChatResponse></ul>
-
-
-  <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendToBot()" />
-  <button (click)="sendToBot()"1>Submit</button>
-
+<div class="send-btn-wrap">
+<input type="text" [(ngModel)]="userInput" (keyup.enter)="sendToBot()" />
+<button (click)="sendToBot()">Submit</button>
 {{userInput}}
 
-
-
-
+</div>
 <button>Bot Button</button>
